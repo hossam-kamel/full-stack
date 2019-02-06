@@ -1,0 +1,135 @@
+#search { width: 300px; }
+#search-in { display: none; }
+#search-hed { color: floralwhite; }
+
+.pointer {cursor: pointer;}
+
+.jumbotron {
+    padding:70px 30px 70px 30px;
+    margin:0px auto;
+    background-image: url('../img/w4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    color: #051234;
+}
+
+.row-header{
+    margin:0px auto;
+    padding:0px;
+}
+
+.row-content {
+    margin:0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height:400px;
+}
+
+.footer{
+    background-color: #051234;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+    color: floralwhite;
+}
+
+.lin {
+    text-decoration: none;
+    color: floralwhite;
+}
+
+.lin:hover {
+    color: cornflowerblue;
+    text-decoration: none;
+}
+
+
+body{
+    padding: 50px 0px 0px 0px;
+    z-index: 0;
+}
+
+.navbar-dark{
+    background-color: #051234;
+}
+
+.tab-content{
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.card-body{ padding: 10px; }
+
+.carousel {
+    background:#051234;
+    box-shadow: 0px 3px 4px #051234;
+}
+
+.carousel-item {
+  height: 300px;
+}
+
+#carouselButton {
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    color: floralwhite;
+}
+
+
+#ci-1 { background-image: url(../img/w2.jpg); }
+
+#ci-2 { background-image: url(../img/w3.jpg); }
+
+#ci-3 { background-image: url(../img/w1.jpg); }
+
+#ci-1 , #ci-2 , #ci-3 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+.ci-cl { color: floralwhite; text-shadow: 0px 2px 3px #051234; }
+
+.T-h { margin-top: 20px; text-shadow: 0px 2px 3px darkgrey; }
+
+.I-h { margin-left: 19%; }
+
+
+.modal-header { background-color: #051234; }
+
+.modal-header , .modal-header button { color: floralwhite; }
+
+.modal-body { background: #E4D9FF; }
+
+.U-but { 
+    background-color: #051234;
+    color: floralwhite;
+}
+
+.sh { box-shadow: 0px 2px 3px #051234; }
+
+.pdt { padding-top: 20px; }
+
+.pd { padding: 20px; }
+
+
+.sidebar-box {
+  max-height: 240px;
+  position: relative;
+  overflow: hidden;
+}
+.sidebar-box .read-more { 
+  position: absolute; 
+  bottom: 0; 
+  left: 0;
+  width: 100%; 
+  text-align: center; 
+  margin: 0; padding: 30px 0; 
+	
+  /* "transparent" only works here because == rgba(0,0,0,0) */
+  background-image: linear-gradient(to bottom, transparent, black);
+}

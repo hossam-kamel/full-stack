@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    
+    <title>Your Blog</title>
+</head>
+
+<body>
+    
+    <!-- Navigation Bar -------------------------------------------------------------------->
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="41"></a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-info fa-lg"></span> About</a></li>
+                    <!--<li class="nav-item"><a id="search-sh"class="nav-link" href="#"><span class="fa fa-search fa-lg"></span> Search</a></li>-->
+                </ul>
+                
+                <div class="input-group mr-auto" id="search">
+                    <h3 id="search-hed" class="search-hov mr-2"> Search </h3>
+                
+                    <input id="search-in" type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="Search-button">
+                    <div class="search-hov" class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="Search-button">
+                            <span class="fa fa-search fa-lg"></span>
+                        </button>
+                    </div>
+                </div>
+                
+                <span class="navbar-text pointer">
+                    <a data-toggle="modal" data-target="#loginmodal">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+                </span>
+                
+                <span class="navbar-text pointer">
+                    <a class="btn btn-success btn-sm ml-3" role="button" aria-disabled="true" data-toggle="modal" data-target="#signupmodal">
+                        <span class="fa fa-user-plus"></span> Sign Up
+                    </a>
+                </span>
+            </div>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    
+    <!-- Modals ------------------------------------------------------------------->
+    <div id="loginmodal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button> 
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row justify-content-center">
+                            <div class="form-group col-sm-7 text-center">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email" class="form-control form-control-lg mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-7 text-center">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-lg mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="offset-sm-1 col-sm-7">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row mt-4 justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-lg col-5">Sign in</button> 
+                            <button type="button" class="btn btn-secondary btn-lg ml-1 col-5" data-dismiss="modal">Cancel</button>       
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="signupmodal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Sign Up</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button> 
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row justify-content-center">
+                            
+                            <div class="form-group col-sm-5">
+                                    <label class="sr-only" for="fname-lbl">First Name</label>
+                                    <input type="text" class="form-control form-control-lg mr-1" id="fname-lbl" placeholder="First Name">
+                            </div>
+                            
+                            <div class="form-group col-sm-5">
+                                    <label class="sr-only" for="lname-lbl">Last Name</label>
+                                    <input type="text" class="form-control form-control-lg mr-1" id="lname-lbl" placeholder="Last Name">
+                            </div>
+                            
+                            <div class="form-group col-sm-7">
+                                    <label class="sr-only" for="email-lbl">Email address</label>
+                                    <input type="email" class="form-control form-control-lg mr-1" id="email-lbl" placeholder="Enter email">
+                            </div>
+                            
+                            <div class="form-group col-sm-7">
+                                <label class="sr-only" for="pass-lbl">Password</label>
+                                <input type="password" class="form-control form-control-lg mr-1" id="pass-lbl" placeholder="Password">
+                            </div>
+                            
+                            <div class="form-group col-sm-7">
+                                <label class="sr-only" for="repass-lbl">Re-Password</label>
+                                <input type="password" class="form-control form-control-lg mr-1" id="repass-lbl" placeholder="Re-Enter Password">
+                            </div>
+                            
+                            <div class="offset-sm-1 col-sm-7">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row mt-4 justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-lg col-5">Sign Up</button>
+                            <button type="button" class="btn btn-secondary btn-lg ml-1 col-5" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="Anonymousmodal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Anonymous Writer</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button> 
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="Write" class="col-12 text-center"> <h3> Make your Influence </h3> </label>
+                            <div class="col-sm-12 ml-auto">
+                                <textarea class="form-control" id="Write" name="Write" rows="12"></textarea>
+                            </div>  
+                        </div>
+                        
+                        <div class="form-group row mt-4">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn col-5 btn-primary offset-sm-1">Publish</button>
+                                <button type="button" class="btn col-5 btn-secondary" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- jumbotron ------------------------------------------------------------------>
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                
+                <div class="col-12 col-sm-3 align-self-center">
+                    <img src="img/logo2.png" class="img-fluid">
+                </div>
+                
+                <div class="col-12 col-sm-6 align-self-center">
+                    <h1>Your Blog</h1>
+                    <h5>where your Words can make huge influence</h5>
+                    <p>The World Appreciates Your Words, So let your words desirve this trust</p>
+                </div>
+                
+                
+                <div class="col-md-3 align-self-center mt-3">
+                    <a role="button" class="btn btn-sm btn-warning btn-block"
+                       data-toggle="modal"
+                       data-target="#Anonymousmodal" title="Here you can publish your writings anonymously !!">Anonymous Writer ?</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+    <!-- Container ------------------------------------------------------------------------>
+    <div class="container">
+        
+        <div class="row row-content">
+            <div class="col">
+                <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        
+                        <div id="ci-1" class="carousel-item active">
+                            <div class="carousel-caption d-none d-md-block ci-cl">
+                                <h2 class="d-none d-sm-block"> 
+                                    &quot; Honesty is the first chapter in the book of wisdom &quot;</h2>
+                                <h5 class="mt-5">&#126; Thomas Jefferson &#126;</h5>
+                            </div>
+                        </div>
+                        
+                        <div id="ci-2" class="carousel-item">
+                            <div class="carousel-caption d-none d-md-block ci-cl">
+                                <h2 class="d-none d-sm-block"> 
+                                    &quot; But man is not made for defeat. A man can be destroyed but not defeated &quot;</h2>
+                                <h5 class="mt-5">&#126; Ernest Hemingway &#126;</h5>
+                            </div>
+                        </div>
+                        
+                        <div id="ci-3" class="carousel-item">
+                            <div class="carousel-caption d-none d-md-block ci-cl">
+                                <h2 class="d-none d-sm-block"> 
+                                    &quot; I have not failed. I've just found 10,000 ways that won't work &quot;</h2>
+                                <h5 class="mt-5">&#126; Thomas A. Edison &#126;</h5>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                    </ol>
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                    
+                    <button class="btn btn-lg btn-link" id="carouselButton">
+                        <span class="fa fa-pause"></span>
+                    </button>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="row row-content align-items-center">
+            
+            <div class="col-12 text-center">
+                <h3 class="T-h">Top Writers Of The Month</h3>
+            </div>
+            
+            <div class="col-sm-4 mt-5">
+                <img class="I-h img-thumbnail sh" src="img/anony.png" alt="Writer 1">
+                <div class="T-h text-center">
+                    <h2 class="mt-2">Writer 1 </h2>
+                    <p class="d-none d-sm-block">The Genius of arts</p>
+                    
+   
+                </div>
+                
+            </div>
+            
+            <div class="col-sm-4 mt-5">
+                <img class="I-h img-thumbnail sh" src="img/anony.png" alt="Writer 2">
+                <div class="T-h text-center">
+                    <h2 class="mt-2">Writer 2 </h2>
+                    <p class="d-none d-sm-block">The Master of writing</p>
+        
+                </div>
+            </div>
+            
+            <div class="col-sm-4 mt-5">
+                <img class="I-h img-thumbnail sh" src="img/anony.png" alt="Writer 3">
+                    <div class="T-h text-center">
+                        <h2 class="mt-2">Writer 3 </h2>
+                        <p class="d-none d-sm-block">The best Writer in Europe</p>
+            
+                    </div>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="lin" href="#">Home</a></li>
+                        <li><a class="lin" href="aboutus.html">About</a></li>
+                        <li><a class="lin" href="contactus.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+		              121 street<br>
+		              Cairo<br>
+		              Egypt<br>
+		              <i class="fa fa-phone fa-lg"></i> : +000 0000 0000<br>
+		              <i class="fa fa-fax fa-lg"></i> : +000 0000 0000<br>
+		              <i class="fa fa-envelope fa-lg"></i> : <a class="lin" href="mailto:yourblog@ublog.net">yourblog@ublog.net</a>
+		           </address>
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter fa-lg"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube fa-lg"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope fa-lg"></i></a>
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>© Copyright 2019 Your Blog</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            
+            $('.search-hov').mouseenter(function() {
+                $('#search-in').show('slow');
+                $('#search-hed').hide();
+            });
+            
+            $('#search-in').mouseleave(function() {
+                $('#search-in').hide();
+                $('#search-hed').show('slow');
+            });
+            
+            
+            $('#mycarousel').carousel({ interval: 6000 });
+            $('#carouselButton').click(function() {
+                if($('#carouselButton').children('span').hasClass('fa-pause')) {
+                    $('#mycarousel').carousel('pause');
+                    $('#carouselButton').children('span').removeClass('fa-pause');
+                    $('#carouselButton').children('span').addClass('fa-play');
+                 }
+                else {
+                    $('#mycarousel').carousel('cycle');
+                    $('#carouselButton').children('span').removeClass('fa-play');
+                    $('#carouselButton').children('span').addClass('fa-pause');
+                }
+            });
+            
+        });
+    </script>
+    
+</body>
+
+</html>
